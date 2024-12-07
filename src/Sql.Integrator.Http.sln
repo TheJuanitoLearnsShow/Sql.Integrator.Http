@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql.Integrator.Http", "Sql.Integrator.Http\Sql.Integrator.Http.csproj", "{9CD80CE4-DE69-4B6D-BC9E-C3BBDF363509}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDbConnect", "SampleDbConnect\SampleDbConnect.csproj", "{CC363145-E0F0-44D4-9B21-743A9B39FF93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql.Integrator.Oracle.Buckets", "Sql.Integrator.Oracle.Buckets\Sql.Integrator.Oracle.Buckets.csproj", "{EF6059F5-62C1-41AD-9630-657B5D439F89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Bucket.Uploader", "7-Tests\Sample.Bucket.Uploader\Sample.Bucket.Uploader.csproj", "{40E24899-828D-4B87-AD69-2F5A9076F688}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7-Tests", "7-Tests", "{D779E119-4D4B-4DB2-A657-52A8CB3994BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CD80CE4-DE69-4B6D-BC9E-C3BBDF363509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD80CE4-DE69-4B6D-BC9E-C3BBDF363509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD80CE4-DE69-4B6D-BC9E-C3BBDF363509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD80CE4-DE69-4B6D-BC9E-C3BBDF363509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC363145-E0F0-44D4-9B21-743A9B39FF93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC363145-E0F0-44D4-9B21-743A9B39FF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC363145-E0F0-44D4-9B21-743A9B39FF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC363145-E0F0-44D4-9B21-743A9B39FF93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6059F5-62C1-41AD-9630-657B5D439F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6059F5-62C1-41AD-9630-657B5D439F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6059F5-62C1-41AD-9630-657B5D439F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6059F5-62C1-41AD-9630-657B5D439F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40E24899-828D-4B87-AD69-2F5A9076F688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E24899-828D-4B87-AD69-2F5A9076F688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E24899-828D-4B87-AD69-2F5A9076F688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E24899-828D-4B87-AD69-2F5A9076F688}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

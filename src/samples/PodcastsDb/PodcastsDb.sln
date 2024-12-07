@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{42EA0DBD-9CF1-443E-919E-BE9C484E4577}") = "PodcastsDb", "PodcastsDb.sqlproj", "{7A794A53-2672-43BE-AB2E-E45063ECDAFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodcastsDb.Tests", "..\PodcastsDb.Tests\PodcastsDb.Tests.csproj", "{1221E66A-6837-4925-A084-99DABBC1CBDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodcastsDb.MSTests", "..\PodcastsDb.MSTests\PodcastsDb.MSTests.csproj", "{4896804D-FC97-431C-83D0-E3A8462CC889}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A794A53-2672-43BE-AB2E-E45063ECDAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A794A53-2672-43BE-AB2E-E45063ECDAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A794A53-2672-43BE-AB2E-E45063ECDAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A794A53-2672-43BE-AB2E-E45063ECDAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1221E66A-6837-4925-A084-99DABBC1CBDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1221E66A-6837-4925-A084-99DABBC1CBDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1221E66A-6837-4925-A084-99DABBC1CBDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1221E66A-6837-4925-A084-99DABBC1CBDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4896804D-FC97-431C-83D0-E3A8462CC889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4896804D-FC97-431C-83D0-E3A8462CC889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4896804D-FC97-431C-83D0-E3A8462CC889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4896804D-FC97-431C-83D0-E3A8462CC889}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
