@@ -11,4 +11,10 @@
       <ProjectReference Include="..\..\Sql.Integrator.Oracle.Buckets\Sql.Integrator.Oracle.Buckets.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="TestUploadFile.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

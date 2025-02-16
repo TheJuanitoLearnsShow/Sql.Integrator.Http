@@ -17,8 +17,9 @@ public class OracleUploader
         _osClient = new ObjectStorageClient(provider, new ClientConfiguration { TimeoutMillis = 1000 * 1000 });
     }
 
-    public async Task UploadFile(string bucketName, string namespaceName, string objectName, string filePath)
+    public async Task<(long fileLength, UploadManager.UploadResponse uploadResponse)> UploadFile(string bucketName, string namespaceName, string objectName, string filePath)
     {
+        var fileLength = new FileInfo(filePath).Length;
         var putObjectRequest = new PutObjectRequest
         {
             BucketName = bucketName,
@@ -32,6 +33,7 @@ public class OracleUploader
         var uploadManager = new UploadManager(_osClient, uploadConfiguration);
         var uploadRequest = new UploadManager.UploadRequest(putObjectRequest) { AllowOverwrite = true };
         var uploadResponse = await uploadManager.Upload(uploadRequest);
+        return (fileLength, uploadResponse);
     }
 }
 //
