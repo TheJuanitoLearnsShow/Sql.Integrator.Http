@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Hello, World!");
 var inputFile = args[0];
 
  var uploader = new OracleUploader();
@@ -12,10 +11,31 @@ var inputFile = args[0];
      inputFile);
 Console.WriteLine(fileSize);
 Console.WriteLine(response.ETag);
-Console.WriteLine($"https://idjjtwzuv8so.objectstorage.us-ashburn-1.oci.customer-oci.com/n/idjjtwzuv8so/b/fbcwh-podcasts/o/{objName}");
+Console.WriteLine();
 
+if (args.Length > 1)
+{
+    
+    var title = args[1];
+    var episodeNum = args[2];
 
-string GetXml(string title, int size, string url, int durationMinutes, int episodeNumber)
+    var xml = GetXml(title, 
+        fileSize,
+        $"https://idjjtwzuv8so.objectstorage.us-ashburn-1.oci.customer-oci.com/n/idjjtwzuv8so/b/fbcwh-podcasts/o/{objName}",
+        (int)GetDuration(inputFile).TotalMinutes,
+        int.Parse(episodeNum)
+    );
+    Console.WriteLine(xml);
+}
+
+TimeSpan GetDuration(string filePath)
+{
+    var tfile = TagLib.File.Create(filePath);
+    string title = tfile.Tag.Title;
+    TimeSpan duration = tfile.Properties.Duration;
+    return duration;
+}
+string GetXml(string title, long size, string url, int durationMinutes, int episodeNumber)
 {
     return $"""
             <item>
@@ -26,7 +46,7 @@ string GetXml(string title, int size, string url, int durationMinutes, int episo
               <pubDate>Sun, 16 Feb 2025 13:00:00 EST</pubDate>
               <title>{title}</title>
               <description>{title}</description>
-              <itunes:duration>00:{durationMinutes}:00</itunes:duration>
+              <itunes:duration>00:{durationMinutes + 1}:00</itunes:duration>
               <itunes:explicit>false</itunes:explicit>
               <itunes:episodeType>full</itunes:episodeType>
             </item>
