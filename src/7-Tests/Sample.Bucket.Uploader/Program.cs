@@ -37,15 +37,17 @@ TimeSpan GetDuration(string filePath)
 }
 string GetXml(string title, long size, string url, int durationMinutes, int episodeNumber)
 {
+    var formattedDate = DateTime.Now.ToString("ddd, dd MMM yyyy HH:mm:ss 'EST'");
+    var formattedTitle = System.Security.SecurityElement.Escape(title);
     return $"""
             <item>
               <guid isPermalink="false">{4069 + episodeNumber - 12}</guid>
               <enclosure url="{url}" type="audio/mpeg" length="{size}"/>
               <itunes:season>2</itunes:season>
               <itunes:episode>{episodeNumber}</itunes:episode>
-              <pubDate>Sun, 16 Feb 2025 13:00:00 EST</pubDate>
-              <title>{title}</title>
-              <description>{title}</description>
+              <pubDate>{formattedDate}</pubDate>
+              <title>{formattedTitle}</title>
+              <description>{formattedTitle}</description>
               <itunes:duration>00:{durationMinutes + 1}:00</itunes:duration>
               <itunes:explicit>false</itunes:explicit>
               <itunes:episodeType>full</itunes:episodeType>
