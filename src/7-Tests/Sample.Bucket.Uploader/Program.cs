@@ -5,9 +5,9 @@ var inputFile = args[0];
  var uploader = new OracleUploader();
  var objName = Path.GetFileName(inputFile);
  var (fileSize, response) = await uploader.UploadFile(
-     "fbcwh-podcasts", 
-  "idjjtwzuv8so", 
-     objName, 
+     "fbcwh-podcasts",
+  "idjjtwzuv8so",
+     objName,
      inputFile);
 Console.WriteLine(fileSize);
 Console.WriteLine(response.ETag);
@@ -15,11 +15,11 @@ Console.WriteLine();
 
 if (args.Length > 1)
 {
-    
+
     var title = args[1];
     var episodeNum = args[2];
 
-    var xml = GetXml(title, 
+    var xml = GetXml(title,
         fileSize,
         $"https://idjjtwzuv8so.objectstorage.us-ashburn-1.oci.customer-oci.com/n/idjjtwzuv8so/b/fbcwh-podcasts/o/{objName}",
         (int)GetDuration(inputFile).TotalMinutes,
@@ -28,11 +28,13 @@ if (args.Length > 1)
     Console.WriteLine(xml);
 }
 
+return;
+
 TimeSpan GetDuration(string filePath)
 {
     var tfile = TagLib.File.Create(filePath);
-    string title = tfile.Tag.Title;
-    TimeSpan duration = tfile.Properties.Duration;
+    var title = tfile.Tag.Title;
+    var duration = tfile.Properties.Duration;
     return duration;
 }
 string GetXml(string title, long size, string url, int durationMinutes, int episodeNumber)
@@ -53,4 +55,4 @@ string GetXml(string title, long size, string url, int durationMinutes, int epis
               <itunes:episodeType>full</itunes:episodeType>
             </item>
             """;
-} 
+}
